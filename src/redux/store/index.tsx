@@ -3,8 +3,9 @@ import logger from "redux-logger";
 import { persistReducer, PersistConfig } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { combineReducers, Middleware } from '@reduxjs/toolkit';
-import {thunk} from 'redux-thunk';
+import { thunk } from 'redux-thunk';
 import auth from "../reducers/auth";
+import dashboard from "../reducers/dashboard";
 
 // fields you want to whitelist
 const persistConfig = {
@@ -15,7 +16,7 @@ const persistConfig = {
 
 const rootReducer = combineReducers({
   auth: auth,
-  // test: test,
+  dashboard: dashboard,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
@@ -23,7 +24,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const store = configureStore({
   reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(thunk as Middleware/* , logger */),
+    getDefaultMiddleware().concat(thunk as Middleware, logger),
 });
 
 export default store;

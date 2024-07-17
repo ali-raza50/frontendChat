@@ -6,7 +6,7 @@ import { RootState } from '../redux/store';
 const PublicRoute: React.FC = () => {
   const { token } = useSelector((state: RootState) => state.auth);
 
-  return token === '' ? <Outlet /> : <Navigate to="/dashboard/main" />;
+  return token === '' ? <Outlet /> : <Navigate to="/home" />;
 };
 
 export default PublicRoute;

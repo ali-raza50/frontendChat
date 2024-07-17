@@ -43,8 +43,9 @@ const styles: { [key: string]: CSSProperties } = {
     justifyContent: 'center '
   },
   mt30: {
-    marginBottom: '30px'
-    // borderColor: '#3f51b5'
+    marginBottom: '30px',
+    textAlign: 'start'
+
   },
   mt16: {
     marginBottom: '16px'
@@ -92,12 +93,12 @@ const Login = () => {
   interface SignInData {
     email: string;
     password: string;
-}
+  }
 
-const [signInObject, setSignInObject] = useState<SignInData>({
+  const [signInObject, setSignInObject] = useState<SignInData>({
     email: '',
     password: ''
-});
+  });
   const { email, password, err, done, token, loading } = useSelector(
     (state: RootState) => state.auth
   );
@@ -174,7 +175,7 @@ const [signInObject, setSignInObject] = useState<SignInData>({
               style={styles.textRight}
               onClick={() => navigate('/auth/forgetpassword')}
             >
-              Forgot your password?
+              {/* Forgot your password? */}
             </small>
             {err ? <small style={styles.textDanger}>{err}</small> : ''}
             <Button

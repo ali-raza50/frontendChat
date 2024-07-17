@@ -99,15 +99,15 @@ const SignUp = () => {
     password: string;
     confirmPassword: string;
     agreePolicy: boolean;
-}
+  }
 
-const [signUpObject, setSignUpObject] = useState<SignUpData>({
+  const [signUpObject, setSignUpObject] = useState<SignUpData>({
     name: '',
     email: '',
     password: '',
     confirmPassword: '',
     agreePolicy: false
-});
+  });
 
   const handleInputChange = (event: any) => {
     const target = event.target;
@@ -139,7 +139,7 @@ const [signUpObject, setSignUpObject] = useState<SignUpData>({
     }
   };
   useEffect(() => {
-    if (signup) navigate('/dashboard/main');
+    if (signup) navigate('/home');
   }, [signup]);
 
   return (

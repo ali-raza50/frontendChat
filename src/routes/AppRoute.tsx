@@ -7,8 +7,8 @@ import PageNotFound from "../pages/PageNotFound";
 const AppRoute: React.FC = () => {
   return (
     <Routes>
-      <Route path="" element={<Navigate to="dashboard/main" />} />
-      <Route path="dashboard/main" element={<Main />} />
+      <Route path="" element={<Navigate to="/home" />} />
+      <Route path="/home" element={<Main />} />
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );

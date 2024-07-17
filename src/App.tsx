@@ -6,6 +6,7 @@ import PageNotFound from './pages/PageNotFound';
 import PublicRoute from './routes/publicRoute';
 import PrivateRoute from './routes/privateRoute';
 import './app.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App: React.FC = () => {
   return (
