@@ -13,7 +13,7 @@ interface ContactListItemProps {
     handleRejectRequest: (requestId: string) => void;
 }
 
-const ContactListItem: React.FC<ContactListItemProps> = ({ imageSrc, name, email, requestId, handleAcceptRequest, handleRejectRequest }) => {
+const ContactListItem: React.FC<ContactListItemProps> = ({ imageSrc, name, email, requestId, status, handleAcceptRequest, handleRejectRequest }) => {
     return (
         <div className="chat-list-item position-relative">
             <div className="mask-group">
@@ -30,22 +30,27 @@ const ContactListItem: React.FC<ContactListItemProps> = ({ imageSrc, name, email
 
                 <div className="chat-status" style={{ 'color': '#767876' }}>{email}</div>
             </div>
-            <div className="d-flex gap-1 action-buttons">
-                <Button
-                    onClick={() => handleAcceptRequest(requestId)}
-                    variant="success"
-                    className="p-1 text-sm font-medium rounded-circle"
-                >
-                    <MdCheck size={20} />
-                </Button>
-                <Button
-                    onClick={() => handleRejectRequest(requestId)}
-                    variant="danger"
-                    className="p-1 text-sm font-medium rounded-circle"
-                >
-                    <MdClose size={20} />
-                </Button>
-            </div>
+            {
+                status === "pending" && (
+                    <div className="d-flex gap-1 action-buttons">
+                        <Button
+                            onClick={() => handleAcceptRequest(requestId)}
+                            variant="success"
+                            className="p-1 text-sm font-medium rounded-circle"
+                        >
+                            <MdCheck size={20} />
+                        </Button>
+                        <Button
+                            onClick={() => handleRejectRequest(requestId)}
+                            variant="danger"
+                            className="p-1 text-sm font-medium rounded-circle"
+                        >
+                            <MdClose size={20} />
+                        </Button>
+                    </div>
+                )
+            }
+
         </div>
     );
 };

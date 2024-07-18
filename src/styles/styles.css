@@ -228,6 +228,7 @@
   width: 100%;
   max-width: 200px;
   text-align: center;
+  border-radius: 7px;
 }
 
 .text-extra-small {
@@ -281,6 +282,7 @@
   border-radius: 20px;
   background-color: #fff;
   width: 100%;
+  margin-left: 0.7rem;
 }
 
 .search-input-send input {
@@ -376,22 +378,21 @@
 }
 
 .custom-container {
-  width: 320px;
+  width: 325px;
   height: 338px;
   flex-shrink: 0;
   border-radius: 0 0 15px 15px;
   background: rgb(255 255 255 / 1);
-  margin: 0 auto;
+  margin: 0 0 0 auto;
 }
 
 .second-div {
-  width: 320px;
+  width: 325px;
   height: calc(100vh - 538px);
   flex-grow: 1;
   border-radius: 15px;
   background: rgb(255 255 255 / 1);
-  /* overflow-y: auto; */
-  margin: 0 auto;
+  margin: 0 0 0 auto;
   padding: 10px 0;
 }
 
@@ -559,4 +560,85 @@
 .message-item.receiver {
   align-self: flex-start;
   background: #6c757d;
+}
+
+
+/* global.css */
+
+
+/* For WebKit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+/* global.css */
+
+.scrollable-div {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.scrollable-div::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+
+.scrollable-div {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
+}
+
+.scrollable-div::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+.scrollable-div::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 10px;
+  border: 2px solid #f1f1f1;
+}
+
+.scrollable-div::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

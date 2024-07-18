@@ -29,7 +29,7 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
       <Nav.Link
         href={href}
         onClick={handleClick}
-        className={`nav-link d-flex just-fy-content-cneter align-items-center flex-column ps-4 pe-3 py-2 text-sm font-weight-bold text-gray-500 
+        className={`nav-link d-flex just-fy-content-cneter align-items-center flex-column px-3 py-2 text-sm font-weight-bold text-gray-500 
           ${active ? 'active' : ''}
           ${active ? 'bg-gray-100 text-black' : ''}
           ${active ? 'dark-mode bg-lightgray text-gray-200' : ''}`}
